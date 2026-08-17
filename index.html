@@ -8,6 +8,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="isarabic">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
@@ -32,21 +33,8 @@ body{
 .wrap{max-width:600px;margin:0 auto}
 .ar{font-family:'Amiri','Traditional Arabic','Geeza Pro',serif;direction:rtl;line-height:1.6}
 
-/* --- entête --- */
-.top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .eb{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
-h1{font-size:19px;font-weight:700;margin:3px 0 0}
 .sub{font-size:11.5px;color:var(--muted);margin:5px 0 0}
-.theme-btn{background:transparent;border:1px solid var(--line);color:var(--muted);
-  border-radius:999px;width:36px;height:36px;font-size:15px;cursor:pointer;flex-shrink:0}
-
-/* --- navigation --- */
-nav{display:flex;gap:4px;margin:15px 0 11px;flex-wrap:wrap}
-nav button{flex:1 1 auto;min-width:62px;padding:8px 4px;border-radius:9px;
-  border:1px solid var(--line);background:transparent;color:var(--muted);
-  font-size:11.5px;font-weight:600;cursor:pointer;font-family:inherit}
-nav button[aria-selected="true"]{background:var(--surf2);color:var(--ink);border-color:var(--gold)}
-nav button:disabled{opacity:.35;cursor:not-allowed}
 
 /* --- filtres --- */
 .chips{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:13px}
@@ -129,6 +117,69 @@ nav button:disabled{opacity:.35;cursor:not-allowed}
   border-left:2px solid var(--gold);color:var(--gold)}
 .warn.bad{background:color-mix(in srgb,var(--clay) 10%,transparent);border-left-color:var(--clay);color:var(--clay)}
 
+
+/* --- en-tête --- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:11px;margin-bottom:4px}
+.brand{display:flex;gap:11px;align-items:center;min-width:0}
+.brand img{border-radius:50%;flex-shrink:0}
+.brand h1{font-size:18px;font-weight:700;margin:0;letter-spacing:-.01em}
+.brand .sub{font-size:11px;color:var(--muted);margin:2px 0 0}
+.hbtns{display:flex;gap:6px;flex-shrink:0}
+.icb{background:transparent;border:1px solid var(--line);color:var(--muted);
+  border-radius:999px;width:36px;height:36px;font-size:15px;cursor:pointer;font-family:inherit;
+  display:inline-flex;align-items:center;justify-content:center}
+.icb:hover{border-color:var(--gold);color:var(--ink)}
+.back{display:inline-flex;align-items:center;gap:7px;background:transparent;border:none;
+  color:var(--muted);font-size:12.5px;cursor:pointer;padding:6px 0;font-family:inherit;font-weight:600}
+.back:hover{color:var(--gold)}
+.secttl{font-size:19px;font-weight:700;margin:2px 0 3px}
+
+/* --- accueil --- */
+.resume{background:var(--surf);border:1px solid var(--line);border-radius:15px;padding:15px;margin-top:14px}
+.resume .lbl{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.pbar{height:6px;border-radius:3px;background:var(--surf2);margin-top:9px;overflow:hidden}
+.pbar i{display:block;height:100%;background:var(--gold);border-radius:3px}
+.pmeta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:6px}
+.cont{margin-top:12px;width:100%;padding:14px;border-radius:11px;border:none;
+  background:var(--gold);color:var(--bg);font-size:14.5px;font-weight:700;cursor:pointer;font-family:inherit}
+[data-theme="light"] .cont{color:#fff}
+
+.grouptitle{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+  font-weight:700;margin:20px 0 8px}
+.menu{display:grid;gap:8px}
+.mi{display:flex;align-items:center;gap:12px;width:100%;text-align:left;
+  background:var(--surf);border:1px solid var(--line);border-radius:13px;
+  padding:13px 14px;cursor:pointer;font-family:inherit;color:var(--ink)}
+.mi:hover{border-color:var(--gold)}
+.mi:disabled{opacity:.42;cursor:not-allowed}
+.mi .ico{width:38px;height:38px;border-radius:10px;background:var(--surf2);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:21px;
+  font-family:'Amiri',serif;color:var(--gold)}
+.mi .tx{flex:1;min-width:0}
+.mi .tx b{display:block;font-size:14px;font-weight:700}
+.mi .tx span{display:block;font-size:11px;color:var(--muted);margin-top:2px;line-height:1.4}
+.mi .arrow{color:var(--muted);font-size:16px;flex-shrink:0}
+.mi .badge{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);
+  border:1px solid var(--line);border-radius:999px;padding:2px 7px;font-weight:700}
+
+/* --- alphabet --- */
+.alpha{display:grid;gap:7px;margin-top:11px}
+.al{display:flex;align-items:center;gap:11px;width:100%;text-align:left;
+  background:var(--surf);border:1px solid var(--line);border-radius:12px;
+  padding:10px 12px;cursor:pointer;font-family:inherit;color:var(--ink)}
+.al:hover{border-color:var(--gold)}
+.al[data-locked="1"]{opacity:.55}
+.al .big{font-size:34px;min-width:44px;text-align:center;font-family:'Amiri',serif;direction:rtl}
+.al .meta{flex:1;min-width:0}
+.al .meta b{font-size:13px;display:block}
+.al .meta span{font-size:10px;color:var(--muted);display:block;margin-top:1px}
+.al .fourforms{font-family:'Amiri',serif;direction:rtl;font-size:19px;color:var(--muted);
+  letter-spacing:5px;white-space:nowrap}
+.al .spk{color:var(--gold);font-size:15px;flex-shrink:0}
+.alnote{font-size:9px;color:var(--gold);border:1px solid var(--line);border-radius:999px;
+  padding:1px 6px;margin-left:5px;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:420px){.al .fourforms{display:none}}
+
 h2{font-size:15px;margin:0 0 3px;font-weight:700}
 h3{font-size:12.5px;margin:14px 0 5px;color:var(--gold);font-weight:700}
 table{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:8px}
@@ -160,19 +211,7 @@ td .ar{font-size:21px}
 </head>
 <body>
 <div class="wrap">
-  <div class="top">
-    <div style="display:flex;gap:11px;align-items:center">
-      <img src="logo.png" alt="isarabic Académie" width="46" height="46"
-           style="border-radius:50%;flex-shrink:0">
-      <div>
-        <div class="eb" id="hdr">Chargement…</div>
-        <h1>حُرُوف · Hourouf</h1>
-        <p class="sub">isarabic Académie</p>
-      </div>
-    </div>
-    <button class="theme-btn" id="themeBtn" title="Changer de thème">◐</button>
-  </div>
-  <nav id="nav"></nav>
+  <header class="top" id="top"></header>
   <div id="view"></div>
 </div>
 
@@ -264,10 +303,24 @@ const WORDS=[
  {ar:"ضَرَب",fr:"il a frappé",l:["dad","ra","ba"],slug:"daraba"}
 ];
 
+
+/* ================= SECTIONS ================= */
+const SECTIONS={
+  reco:{t:"Reconnaître une lettre",d:"Une forme s'affiche seule, tu donnes son nom.",ico:"ن"},
+  retro:{t:"Retrouver la forme",d:"On te donne le nom et la position, tu choisis la forme.",ico:"ـنـ"},
+  syl:{t:"Lire une syllabe",d:"Lettre + voyelle courte : بَ بُ بِ",ico:"بَ",mod:"harakat"},
+  dictee:{t:"Dictée à l'oreille",d:"Tu écoutes la voix du professeur et tu identifies la lettre.",ico:"◉"},
+  lire:{t:"Lire des mots",d:"Des mots composés uniquement de tes lettres acquises.",ico:"كَ"},
+  alphabet:{t:"L'alphabet",d:"Les 28 lettres et leurs formes. Touche une lettre pour l'entendre.",ico:"أ"},
+  regles:{t:"Les règles",d:"Harakat, chadda, soukoûn, tanwîn, hamza, solaires et lunaires.",ico:"◈"},
+  set:{t:"Réglages",d:"Fiches suivies, modules, thème, sauvegarde.",ico:"⚙"}
+};
+const DRILLS=["reco","retro","syl","dictee"];
+
 /* ================= ÉTAT ================= */
 const KEY="hourouf.v3";
-let S = {theme:"dark", fiches:[1,2,3], mod:{harakat:false,signes:false}, stats:{}};
-let tab="lettres", filter="all", sylFilter="all", q=null, ans=null, lastKey=null;
+let S = {theme:"dark", fiches:[1], mod:{harakat:false,signes:false}, stats:{}, last:"reco"};
+let tab="home", filter="all", sylFilter="all", q=null, ans=null, lastKey=null;
 let session={r:0,t:0}, revealed={}, ioMsg=null, recFor=null, recErr=null;
 let mediaRec=null, recChunks=[], myRec={};
 const audioCache={};   // url -> true/false (existe ou non)
@@ -278,6 +331,7 @@ function load(){
     if(Array.isArray(d.fiches)&&d.fiches.length) S.fiches=d.fiches;
     if(d.mod) S.mod={...S.mod,...d.mod};
     if(d.stats) S.stats=d.stats;
+    if(d.last) S.last=d.last;
   }}catch(e){}
 }
 function save(){ try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){} }
@@ -396,17 +450,17 @@ function stopRec(){
 /* ================= QUESTIONS ================= */
 function nextQ(){
   ans=null;
-  if(tab==="lettres"||tab==="retro"){
+  if(tab==="reco"||tab==="retro"){
     const it=pick(letterItems(),lastKey); if(!it){q=null;return;}
     lastKey=it.key; const L=BY[it.id];
-    if(tab==="lettres"){
+    if(tab==="reco"){
       q={mode:"reco",key:it.key,L,pos:it.pos,prompt:L.forms[it.pos],
          opts:shuffle([L,...distractors(L,3)]).map(x=>({id:x.id,lab:x.name})),good:L.id};
     }else{
       q={mode:"retro",key:it.key,L,pos:it.pos,prompt:`${L.name} — ${POS[it.pos]}`,
          opts:shuffle([L,...distractors(L,3,it.pos)]).map(x=>({id:x.id,lab:x.forms[it.pos],ar:1})),good:L.id};
     }
-  } else if(tab==="syllabes"){
+  } else if(tab==="syl"){
     const it=pick(sylItems(),lastKey); if(!it){q=null;return;}
     lastKey=it.key; const L=BY[it.id];
     // distracteurs : même lettre autres voyelles + lettres de la même famille
@@ -654,48 +708,138 @@ function setView(){
   return h;
 }
 
+
+function progress(){
+  let solid=0,total=0;
+  avail().forEach(l=>Object.keys(l.forms).forEach(p=>{
+    total++; const st=S.stats[l.id+":"+p]; if(st&&st.seen>=3&&st.correct/st.seen>=.8) solid++;
+  }));
+  return {solid,total,pct:total?Math.round(solid/total*100):0};
+}
+
+function topHtml(){
+  const th=`<button class="icb" id="themeBtn" title="Changer de thème">◐</button>`;
+  if(tab==="home"){
+    return `<div class="brand">
+      <img src="logo.png" alt="isarabic Académie" width="44" height="44">
+      <div><h1>isarabic</h1><p class="sub">Lecture de l'arabe</p></div>
+    </div><div class="hbtns">
+      <button class="icb" data-go="set" title="Réglages">⚙</button>${th}</div>`;
+  }
+  const sec=SECTIONS[tab]||{t:""};
+  return `<div class="brand" style="flex-direction:column;align-items:flex-start;gap:0">
+    <button class="back" data-go="home">← Accueil</button>
+    <div class="secttl">${sec.t}</div>
+  </div><div class="hbtns">${th}</div>`;
+}
+
+function menuItem(k,extra){
+  const sec=SECTIONS[k];
+  const off = sec.mod && !S.mod[sec.mod];
+  return `<button class="mi" data-go="${k}" ${off?'disabled title="Active le module Harakat dans Réglages"':''}>
+    <span class="ico">${sec.ico}</span>
+    <span class="tx"><b>${sec.t}</b><span>${off?"Verrouillé — module Harakat désactivé":sec.d}</span></span>
+    ${extra||""}<span class="arrow">›</span></button>`;
+}
+
+function homeView(){
+  const p=progress(), A=avail();
+  const dernier = SECTIONS[S.last]||SECTIONS.reco;
+  let h=`<div class="resume">
+    <div class="lbl">Ta progression</div>
+    <div class="pbar"><i style="width:${p.pct}%"></i></div>
+    <div class="pmeta"><span>${p.solid} formes acquises sur ${p.total}</span><span>${p.pct}%</span></div>
+    <div class="pmeta"><span>${A.length} lettres · fiche${S.fiches.length>1?"s":""} ${S.fiches.join(", ")}</span>
+      <span>${session.t?session.r+"/"+session.t+" cette session":""}</span></div>
+    <button class="cont" data-go="${S.last}">Reprendre — ${dernier.t.toLowerCase()}</button>
+  </div>`;
+
+  h+=`<div class="grouptitle">S'entraîner</div><div class="menu">
+    ${menuItem("reco")}${menuItem("retro")}${menuItem("syl")}${menuItem("dictee")}</div>`;
+
+  h+=`<div class="grouptitle">Consulter</div><div class="menu">
+    ${menuItem("alphabet")}${menuItem("lire")}${menuItem("regles")}</div>`;
+
+  h+=`<div class="grouptitle">Réglages</div><div class="menu">
+    ${menuItem("set",`<span class="badge">${A.length} lettres</span>`)}</div>`;
+
+  if(S.fiches.length===1&&S.fiches[0]===1)
+    h+=`<div class="warn">Seule la fiche 1 est active. Ajoute les fiches vues en cours dans Réglages — les lettres non cochées n'apparaissent jamais dans les exercices.</div>`;
+  return h;
+}
+
+function alphabetView(){
+  const seen=new Set(avail().map(l=>l.id));
+  let h=`<p class="sub" style="margin-bottom:2px">Touche une lettre pour entendre la voix du professeur. Les lettres non encore vues en cours sont grisées, mais restent consultables — écouter ne présente aucun risque, contrairement à s'entraîner à prononcer sans correction.</p>`;
+  let f=0;
+  h+=`<div class="alpha">`;
+  LETTERS.forEach(l=>{
+    if(l.f!==f){ f=l.f; h+=`<div class="grouptitle" style="margin:14px 0 2px">Fiche ${f}${seen.has(l.id)?"":" — pas encore vue"}</div>`; }
+    const forms=Object.keys(l.forms).map(k=>l.forms[k]).join(" ");
+    h+=`<button class="al" data-locked="${seen.has(l.id)?0:1}" data-play="${l.id}">
+      <span class="big">${l.forms.isolee}</span>
+      <span class="meta"><b>${l.n}. ${l.name}${seen.has(l.id)?"":'<span class="alnote">non vue</span>'}</b>
+        <span>${l.dots} · ${l.cx?"liante":"non liante"}</span></span>
+      <span class="fourforms">${forms}</span>
+      <span class="spk">▸</span></button>`;
+  });
+  h+=`</div><div class="warn">Aucun son ne se joue tant que les fichiers audio ne sont pas dans le dépôt.</div>`;
+  return h;
+}
+
 function render(){
   document.documentElement.setAttribute("data-theme",S.theme);
-  document.getElementById("hdr").textContent =
-    `${avail().length} lettres · fiches ${S.fiches.join(", ")}${S.mod.harakat?" · harakat":""}`;
-  document.getElementById("nav").innerHTML=navHtml();
+  document.getElementById("top").innerHTML=topHtml();
   const v=V();
-  if(tab==="lettres"||tab==="retro") v.innerHTML=filtersHtml()+drillView();
-  else if(tab==="syllabes") v.innerHTML=sylFiltersHtml()+drillView();
-  else if(tab==="dictee") v.innerHTML=
+  if(tab==="home")           v.innerHTML=homeView();
+  else if(tab==="reco"||tab==="retro") v.innerHTML=filtersHtml()+drillView();
+  else if(tab==="syl")       v.innerHTML=sylFiltersHtml()+drillView();
+  else if(tab==="dictee")    v.innerHTML=
     `<div class="warn">Nécessite les fichiers audio dans <code>audio/lettres/</code>. Sans eux, le bouton ▸ reste muet.</div>`+drillView();
-  else if(tab==="lire") v.innerHTML=lireView();
-  else if(tab==="regles") v.innerHTML=reglesView();
-  else v.innerHTML=setView();
+  else if(tab==="lire")      v.innerHTML=lireView();
+  else if(tab==="alphabet")  v.innerHTML=alphabetView();
+  else if(tab==="regles")    v.innerHTML=reglesView();
+  else                       v.innerHTML=setView();
+  window.scrollTo(0,0);
 }
 
 /* ================= ÉVÉNEMENTS ================= */
 document.addEventListener("click",async e=>{
   const t=e.target.closest("button"); if(!t) return;
   if(t.id==="themeBtn"){ S.theme=S.theme==="dark"?"light":"dark"; save(); render(); return; }
-  if(t.dataset.tab){ tab=t.dataset.tab; ans=null; lastKey=null; revealed={};
-    if(["lettres","retro","syllabes","dictee"].includes(tab)) nextQ(); render(); return; }
+  if(t.dataset.go){
+    const dest=t.dataset.go;
+    if(SECTIONS[dest]&&SECTIONS[dest].mod&&!S.mod[SECTIONS[dest].mod]) return;
+    tab=dest; ans=null; lastKey=null; revealed={};
+    if(DRILLS.includes(tab)){ S.last=tab; save(); nextQ(); }
+    render(); return; }
   if(t.dataset.f!==undefined){ filter=t.dataset.f; lastKey=null; nextQ(); render(); return; }
   if(t.dataset.sf!==undefined){ sylFilter=t.dataset.sf; lastKey=null; nextQ(); render(); return; }
   if(t.dataset.ans!==undefined){ answer(t.dataset.ans); return; }
   if(t.dataset.next){ nextQ(); render(); return; }
   if(t.dataset.rev!==undefined){ const i=t.dataset.rev; revealed[i]=!revealed[i]; render(); return; }
-  if(t.dataset.play){ const ok=await playLetter(t.dataset.play, q&&q.mode==="syl"?q.h:null);
-    if(!ok){ t.textContent="Pas encore d'audio"; } return; }
+  if(t.dataset.play){
+    const h = (tab==="syl" && q && q.mode==="syl") ? q.h : null;
+    const ok = await playLetter(t.dataset.play, h);
+    if(!ok){
+      const spk=t.querySelector(".spk");
+      if(spk) spk.textContent="—"; else t.textContent="Pas encore d'audio";
+    }
+    return; }
   if(t.dataset.playw){ const ok=await playWord(t.dataset.playw); if(!ok) t.textContent="—"; return; }
   if(t.dataset.reset){ S.stats={}; session={r:0,t:0}; save(); lastKey=null; nextQ(); render(); return; }
   if(t.dataset.fiche){ const f=+t.dataset.fiche;
     const nf=S.fiches.includes(f)?S.fiches.filter(x=>x!==f):[...S.fiches,f].sort((a,b)=>a-b);
     if(!nf.length) return; S.fiches=nf; filter="all"; sylFilter="all"; save(); render(); return; }
   if(t.dataset.mod){ S.mod[t.dataset.mod]=!S.mod[t.dataset.mod];
-    if(!S.mod.harakat&&tab==="syllabes") tab="lettres"; save(); render(); return; }
+    if(!S.mod.harakat&&tab==="syl") tab="home"; save(); render(); return; }
   if(t.dataset.rec){ const id=t.dataset.rec;
     if(recFor===id){ const d=await stopRec(); recFor=null; if(d) myRec[id]=d; }
     else { if(recFor) await stopRec(); if(await startRec()) recFor=id; }
     render(); return; }
   if(t.dataset.export){
     const blob=new Blob([JSON.stringify({app:"hourouf",v:3,date:new Date().toISOString(),
-      stats:S.stats,fiches:S.fiches,mod:S.mod})],{type:"application/json"});
+      stats:S.stats,fiches:S.fiches,mod:S.mod,last:S.last})],{type:"application/json"});
     const u=URL.createObjectURL(blob), a=document.createElement("a");
     a.href=u; a.download=`hourouf-${new Date().toISOString().slice(0,10)}.json`;
     document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),2000);
@@ -710,6 +854,7 @@ document.addEventListener("change",async e=>{
     const d=JSON.parse(await f.text());
     if(d.app!=="hourouf"){ ioMsg="Ce fichier n'est pas une sauvegarde Hourouf."; render(); return; }
     if(d.stats) S.stats=d.stats;
+    if(d.last) S.last=d.last;
     if(Array.isArray(d.fiches)&&d.fiches.length) S.fiches=d.fiches;
     if(d.mod) S.mod={...S.mod,...d.mod};
     save(); ioMsg="Import terminé."; render();

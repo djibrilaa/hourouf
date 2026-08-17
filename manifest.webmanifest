@@ -1,7 +1,7 @@
 {
-  "name": "Hourouf — isarabic Académie",
-  "short_name": "Hourouf",
-  "description": "Révision des lettres arabes — isarabic Académie",
+  "name": "isarabic — Lecture de l'arabe",
+  "short_name": "isarabic",
+  "description": "Révision des lettres et de la lecture arabe — isarabic Académie",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

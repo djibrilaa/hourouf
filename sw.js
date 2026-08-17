@@ -1,5 +1,5 @@
 // Hourouf — service worker : coquille en cache, audio mis en cache à la première écoute.
-const V = "hourouf-v4";
+const V = "isarabic-v5";
 const SHELL = ["./", "./index.html", "./data.js", "./manifest.webmanifest",
                "./logo.png", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png"];
 
